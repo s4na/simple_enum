@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
 
   s.metadata = {
     "source_code_uri"   => "https://github.com/s4na/simple_enum2",
-    "bug_tracker_uri"   => "https://github.com/s4na/simple_enum2/issues",
-    "changelog_uri"     => "https://github.com/s4na/simple_enum2/blob/master/CHANGELOG.md"
+    "bug_tracker_uri"   => "https://github.com/s4na/simple_enum2/issues"
   }
 
   s.files            = %w{.gitignore Rakefile Gemfile README.md LICENSE simple_enum.gemspec} + Dir['**/*.{rb,yml}']

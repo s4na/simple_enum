@@ -7,7 +7,6 @@ describe SimpleEnum::Mongoid do
       include Mongoid::Document
       include SimpleEnum::Mongoid
 
-      store_in collection: 'dummies'
       instance_eval(&block)
     end
   end

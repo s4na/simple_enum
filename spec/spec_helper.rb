@@ -1,15 +1,22 @@
 require 'rubygems'
 require 'bundler/setup'
 
+require 'simplecov'
+
+SimpleCov.start do
+  add_filter '/spec/'
+  add_filter '/gemfiles/'
+  enable_coverage :branch
+
+  if ENV['CI']
+    minimum_coverage line: 100, branch: 100
+  end
+end
+
 require 'logger'
 require 'rspec'
 require 'active_record'
 require 'mongoid'
-
-if ENV['CODECLIMATE_REPO_TOKEN']
-  require 'simplecov'
-  SimpleCov.start
-end
 
 require 'simple_enum'
 

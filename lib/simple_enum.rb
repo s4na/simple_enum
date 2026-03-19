@@ -41,5 +41,7 @@ module SimpleEnum
   end
 end
 
+# :nocov:
 # Load rails support
 require 'simple_enum/railtie' if defined?(Rails)
+# :nocov:

@@ -13,21 +13,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ['2.7', '3.0', '3.1', '3.2', '3.3']
+        ruby: ['2.7', '3.0', '3.1']
         gemfile:
           - Gemfile
           - gemfiles/rails-5.1.gemfile
           - gemfiles/rails-5.2.gemfile
         exclude:
-          # Rails 5.x doesn't support Ruby 3.2+
-          - ruby: '3.2'
+          # Default Gemfile uses Rails 5.0 which doesn't support Ruby 3.0+
+          - ruby: '3.0'
+            gemfile: Gemfile
+          - ruby: '3.1'
+            gemfile: Gemfile
+          # Rails 5.1 doesn't support Ruby 3.0+
+          - ruby: '3.0'
             gemfile: gemfiles/rails-5.1.gemfile
-          - ruby: '3.2'
-            gemfile: gemfiles/rails-5.2.gemfile
-          - ruby: '3.3'
+          - ruby: '3.1'
             gemfile: gemfiles/rails-5.1.gemfile
-          - ruby: '3.3'
-            gemfile: gemfiles/rails-5.2.gemfile
 
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}

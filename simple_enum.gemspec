@@ -13,7 +13,13 @@ Gem::Specification.new do |s|
 
   s.authors  = ["Lukas Westermann"]
   s.email    = ["lukas.westermann@gmail.com"]
-  s.homepage = "http://lwe.github.com/simple_enum/"
+  s.homepage = "https://github.com/s4na/simple_enum2"
+
+  s.metadata = {
+    "source_code_uri"   => "https://github.com/s4na/simple_enum2",
+    "bug_tracker_uri"   => "https://github.com/s4na/simple_enum2/issues",
+    "changelog_uri"     => "https://github.com/s4na/simple_enum2/blob/master/CHANGELOG.md"
+  }
 
   s.files            = %w{.gitignore Rakefile Gemfile README.md LICENSE simple_enum.gemspec} + Dir['**/*.{rb,yml}']
   s.test_files       = s.files.grep(%r{^(test|spec)/})

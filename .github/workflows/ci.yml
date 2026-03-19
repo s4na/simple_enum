@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: ['2.7', '3.0', '3.1']
+        gemfile:
+          - Gemfile
+          - gemfiles/rails-5.1.gemfile
+          - gemfiles/rails-5.2.gemfile
+        exclude:
+          # Default Gemfile uses Rails 5.0 which doesn't support Ruby 3.0+
+          - ruby: '3.0'
+            gemfile: Gemfile
+          - ruby: '3.1'
+            gemfile: Gemfile
+          # Rails 5.1 doesn't support Ruby 3.0+
+          - ruby: '3.0'
+            gemfile: gemfiles/rails-5.1.gemfile
+          - ruby: '3.1'
+            gemfile: gemfiles/rails-5.1.gemfile
+
+    env:
+      BUNDLE_GEMFILE: ${{ matrix.gemfile }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby ${{ matrix.ruby }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Run specs (without mongoid)
+        run: bundle exec rspec spec/ -t ~mongoid

@@ -26,7 +26,9 @@ module SimpleEnum
     alias_method :[], :value
 
     def fetch(key)
-      value(key) || raise("Key \"#{key}\" not found")
+      result = value(key)
+      raise("Key \"#{key}\" not found") if result.nil?
+      result
     end
 
     def each_pair(&block)

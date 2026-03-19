@@ -3,6 +3,8 @@ source "http://rubygems.org"
 gem 'activesupport', '~> 5.0.0'
 gem 'activerecord', '~> 5.0.0'
 
+gem 'rspec', '~> 2.14'
+
 gemspec
 
 # some development deps

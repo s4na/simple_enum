@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 
+require 'logger'
 require 'rspec'
 require 'active_record'
 require 'mongoid'

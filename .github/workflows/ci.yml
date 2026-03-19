@@ -30,6 +30,11 @@ jobs:
             gemfile: gemfiles/rails-5.1.gemfile
           - ruby: '3.1'
             gemfile: gemfiles/rails-5.1.gemfile
+          # Rails 5.2 doesn't officially support Ruby 3.0+
+          - ruby: '3.0'
+            gemfile: gemfiles/rails-5.2.gemfile
+          - ruby: '3.1'
+            gemfile: gemfiles/rails-5.2.gemfile
 
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}

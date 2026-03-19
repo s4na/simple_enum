@@ -11,4 +11,6 @@ gem 'bson_ext', platform: :ruby
 # Code coverage on CI only
 gem 'codeclimate-test-reporter', group: :test, require: nil
 
+gem 'rspec', '~> 2.14'
+
 gemspec path: "../"

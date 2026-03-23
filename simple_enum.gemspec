@@ -2,7 +2,7 @@
 require File.expand_path('../lib/simple_enum/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "simple_enum"
+  s.name        = "simple_enum2"
   s.version     = SimpleEnum::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Simple enum-like field support for models."

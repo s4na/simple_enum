@@ -2,7 +2,7 @@
 require File.expand_path('../lib/simple_enum/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "simple_enum"
+  s.name        = "simple_enum2"
   s.version     = SimpleEnum::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Simple enum-like field support for models."
@@ -13,7 +13,12 @@ Gem::Specification.new do |s|
 
   s.authors  = ["Lukas Westermann"]
   s.email    = ["lukas.westermann@gmail.com"]
-  s.homepage = "http://lwe.github.com/simple_enum/"
+  s.homepage = "https://github.com/s4na/simple_enum2"
+
+  s.metadata = {
+    "source_code_uri"   => "https://github.com/s4na/simple_enum2",
+    "bug_tracker_uri"   => "https://github.com/s4na/simple_enum2/issues"
+  }
 
   s.files            = %w{.gitignore Rakefile Gemfile README.md LICENSE simple_enum.gemspec} + Dir['**/*.{rb,yml}']
   s.test_files       = s.files.grep(%r{^(test|spec)/})

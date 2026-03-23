@@ -2,14 +2,13 @@ SimpleEnum
 ==========
 
 [![Gem Version](https://badge.fury.io/rb/simple_enum.svg)](https://badge.fury.io/rb/simple_enum)
-[![Build Status](https://travis-ci.org/lwe/simple_enum.svg)](https://travis-ci.org/lwe/simple_enum)
-[![Code Climate](https://codeclimate.com/github/lwe/simple_enum.svg)](https://codeclimate.com/github/lwe/simple_enum)
+[![CI](https://github.com/s4na/simple_enum2/actions/workflows/ci.yml/badge.svg)](https://github.com/s4na/simple_enum2/actions/workflows/ci.yml)
 
 Unobtrusive enum-like fields for ActiveRecord and Ruby, brings enums functionality
 to ActiveRecord and Mongoid models (built for Rails 4+).
 
 Since version 2.0, simple_enum is no longer compatible with Rails 3.x or Ruby 1.8,
-use version 1.6 instead: https://github.com/lwe/simple_enum/tree/legacy-1.x
+use version 1.6 instead: https://github.com/s4na/simple_enum2/tree/legacy-1.x
 
 *Note*: a recent search on github for `enum` turned out, that there are many,
 many similar solutions. In fact starting with Rails 4.1, there's `ActiveRecord::Enum`
@@ -321,11 +320,11 @@ Contributors
 - [@patbenatar](https://github.com/patbenatar) - for helping move towards 2.0 (scopes et all)
 - [@abacha](https://github.com/abacha) - translation helpers, README fixes
 - [@bbtfr](https://github.com/bbtfr) - for support, ideas and pushing extensions
-- and all others: https://github.com/lwe/simple_enum/graphs/contributors thanks
+- and all others: https://github.com/s4na/simple_enum2/graphs/contributors thanks
 
 License & Copyright
 -------------------
 
 Copyright (c) 2011-2015 by Lukas Westermann, Licensed under MIT License (see LICENSE file)
 
-[VE.rb]: https://github.com/lwe/simple_enum/blob/master/lib/simple_enum/view_helpers.rb
+[VE.rb]: https://github.com/s4na/simple_enum2/blob/master/lib/simple_enum/view_helpers.rb
